@@ -1,5 +1,11 @@
 # PatrimoniX
 
+### O que é o projeto PatrimoniX
+
+PatrimoniX é um gerente de investimentos, nos quais os usuários podem registrar suas operações na bolsa de valores
+com diversos tipos de ativos, assim como acompanhar seu desempenho com um dashboard e até mesmo simular aportes com 
+uma calculadora de aportes inteligente!
+
 ## Como instalar?
 
 Faça o clone do repositório e preencha o .env conforme o .env.example.
@@ -28,6 +34,13 @@ Obs.: Não precisa fazer o --build dessa vez.
 
 ```docker compose -f .\docker-compose-with-images.yml up -d ```
 
+### Créditos
 
+Esse foi um projeto desenvolvido no projeto WebAcademy, uma parceria Icomp-Motorola na UFAM
+Nele, trabalharam 4 pessoas, a quais as 3 outras participantes estão a seguir:
+
+👷 Thiago Wesley: https://www.linkedin.com/in/thiago-oliveira-899664b0/
+👷 Max de Souza: https://www.linkedin.com/in/max-souza-4533b6196/
+👷‍♀️ Daniele Greice: https://www.linkedin.com/in/daniele-greice-00b484186/
 
 
