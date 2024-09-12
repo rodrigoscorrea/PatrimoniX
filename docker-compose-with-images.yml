@@ -17,7 +17,7 @@ services:
 
   backend:
     container_name: backend_patrimonix
-    image: abriciof/patrimonix_backend:latest
+    image: rodrigoscorrea/patrimonix_backend:latest
     restart: always
     networks:
       - patrimonix
@@ -35,7 +35,7 @@ services:
 
   frontend:
     container_name: frontend_patrimonix
-    image: abriciof/patrimonix_frontend:latest
+    image: rodrigoscorrea/patrimonix_frontend:latest
     restart: always
     networks:
       - patrimonix

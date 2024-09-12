@@ -37,6 +37,7 @@ Obs.: Não precisa fazer o --build dessa vez.
 ### Créditos
 
 Esse foi um projeto desenvolvido no projeto WebAcademy, uma parceria Icomp-Motorola na UFAM
+
 Nele, trabalharam 4 pessoas, a quais as 3 outras participantes estão a seguir:
 
 👷 Thiago Wesley: https://www.linkedin.com/in/thiago-oliveira-899664b0/
