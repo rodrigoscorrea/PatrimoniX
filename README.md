@@ -40,7 +40,9 @@ Esse foi um projeto desenvolvido no projeto WebAcademy, uma parceria Icomp-Motor
 Nele, trabalharam 4 pessoas, a quais as 3 outras participantes estão a seguir:
 
 👷 Thiago Wesley: https://www.linkedin.com/in/thiago-oliveira-899664b0/
+
 👷 Max de Souza: https://www.linkedin.com/in/max-souza-4533b6196/
+
 👷‍♀️ Daniele Greice: https://www.linkedin.com/in/daniele-greice-00b484186/
 
 
