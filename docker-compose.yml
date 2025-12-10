@@ -3,17 +3,19 @@ version: "3.8"
 services:
   db:
     container_name: db_patrimonix
-    image: mysql:latest
+    image: mysql:8.0
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
       - "${MYSQL_PORT}:3306"
     networks:
       - rede_patrimonix
+    command: --default-authentication-plugin=caching_sha2_password
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
 
   backend:
     container_name: backend_patrimonix
@@ -27,7 +29,7 @@ services:
     ports:
       - "${BACKEND_PORT}:${BACKEND_PORT}"
     environment:
-      - DATABASE_URL=mysql://root:${MYSQL_PASSWORD}@db/${MYSQL_DATABASE}
+      - DATABASE_URL=${DATABASE_URL}
       - DEFAULT_LANG=${DEFAULT_LANG}
       - NODE_ENV=${NODE_ENV}
       - PORT=${BACKEND_PORT}

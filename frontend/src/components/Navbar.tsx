@@ -24,6 +24,7 @@ function Navbar() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log(session)
         const response = await fetchTransactions();
         const transactions: transaction[] = response.filter(
           (transaction) => transaction.userCpf === session
@@ -134,8 +135,8 @@ function Navbar() {
         console.error("Erro ao buscar dados:", error);
       }
     };
-    fetchData();
-    const interval = setInterval(fetchData, 1000);
+    if(session) fetchData();
+    const interval = setInterval(fetchData, 30000);
     return () => clearInterval(interval);
   }, [session]);
 
