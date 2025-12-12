@@ -11,7 +11,7 @@ import { meta } from "../types/metas";
 import { report } from "../types/report";
 
 const api = axios.create({
-  baseURL: "http://localhost:4466/v1",
+  baseURL: "http://ec2-13-59-34-216.us-east-2.compute.amazonaws.com/v1",
   withCredentials: true,
 });
 
@@ -53,7 +53,7 @@ export const createTipoAtivo = (data: submit_tipo_ativo) =>
 export const createUser = (data: user) =>
   api.post("/signup", data).then((response) => response.data);
 export const getUser = (data: LoginDto): Promise<string> =>
-  api.post("/login/", data).then((response) => response.data);
+  api.post("/login", data).then((response) => response.data);
 export const logout = () => api.post("/logout");
 export const authService = (): Promise<boolean> =>
   api.get("/checkAuth").then((response) => response.data);
