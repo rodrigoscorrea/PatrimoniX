@@ -11,7 +11,7 @@ import { meta } from "../types/metas";
 import { report } from "../types/report";
 
 const api = axios.create({
-  baseURL: "http://ec2-13-59-34-216.us-east-2.compute.amazonaws.com/v1",
+  baseURL: "/v1",
   withCredentials: true,
 });
 

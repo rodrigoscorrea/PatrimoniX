@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://ec2-13-59-34-216.us-east-2.compute.amazonaws.com/v1/transaction/quote/'; // URL do proxy no backend
+const baseUrl = '/v1/transaction/quote/';
 
 export const fetchStockQuote = async (tradingCode: string): Promise<number> => {
   try {
