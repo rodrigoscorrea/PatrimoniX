@@ -1,7 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
 import path from "path";
-import cookieParser from "cookie-parser";
 import { nextTick } from "process";
 import cors from "cors";
 
@@ -32,7 +31,7 @@ app.use(
     origin: true,
   })
 );
-app.use(cookieParser());
+
 app.use(
   session({
     genid: (req) => uuidv4(),
@@ -42,11 +41,12 @@ app.use(
     cookie: {
       secure: false,
       httpOnly: true,
+      sameSite: 'lax',
       maxAge: 2 * 60 * 60 * 1000,
     },
   })
 );
-app.use(setLangCookie);
+
 app.use(express.json());
 
 app.use((req, res, next) => {
@@ -55,12 +55,6 @@ app.use((req, res, next) => {
 })
 
 app.use(router);
-
-// Log
-/*app.post('/v1/user', (req, res) => {
-    console.log('Dados recebidos:', req.body);
-    res.status(201).send('Usuário criado com sucesso');
-});*/
 
 app.listen(PORT, () => {
   console.log(`server runing on ${PORT}`);
